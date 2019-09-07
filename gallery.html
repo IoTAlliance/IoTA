@@ -34,6 +34,107 @@
     background: #212121;
     font-family: sans-serif;
   } */
+  @media (min-width: 480px) {
+  .gallery {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+}
+@media (min-width: 1260px) {
+  .gallery {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
+
+  .close {
+  color: #aaa;
+  float: right;
+  font-size: 75px;
+  font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .close1 {
+  color: #aaa;
+  float: right;
+  font-size: 75px;
+  font-weight: bold;
+  }
+
+  .close1:hover,
+  .close1:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .close2 {
+  color: #aaa;
+  float: right;
+  font-size: 75px;
+  font-weight: bold;
+  }
+
+  .close2:hover,
+  .close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+    #photogallery{
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 9999; /* Sit on top */
+      padding-top: 00px;
+      right: 0;
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(255, 255, 255); /* Fallback color */
+      /* background-color: rgba(0,0,0,0.4);  */
+    }
+    #photogallery1{
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 9999; /* Sit on top */
+      padding-top: 00px;
+      right: 0;
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(255, 255, 255); /* Fallback color */
+      /* background-color: rgba(0,0,0,0.4);  */
+    }
+    #photogallery2{
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 9999; /* Sit on top */
+      padding-top: 00px;
+      right: 0;
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(255, 255, 255); /* Fallback color */
+      /* background-color: rgba(0,0,0,0.4);  */
+    }
     .box {
       width: 1200px;
       display: grid;
@@ -130,7 +231,7 @@
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-  <div class="site-wrap" id="home-section">
+  <div class="site-wrap " id="home-section">
 
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -142,7 +243,7 @@
     </div>
 
 
-    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    <header class="site-navbar js-sticky-header site-navbar-target " role="banner">
 
       <div class="container">
         <div class="row align-items-center position-relative">
@@ -150,7 +251,7 @@
 
           <div class="site-logo">
             <!-- <a href="index.html" class="text-black"><span class="text-primary">IoTA Alliance</a> -->
-            <a href="index.html"><img src="iota_logo.png" height="60" width="200"></a>
+            <a href="index.html"><img src="iota_logo.png" height="5%" width="180"></a>
           </div>
 
           <nav class="site-navigation text-center ml-auto" role="navigation">
@@ -158,12 +259,12 @@
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               <li><a href="index.html#home-section" class="nav-link">Home</a></li>
               <li><a href="index.html#about-section" class="nav-link">About</a></li>
-              <li><a href="index.html#services-section" class="nav-link">Services</a></li>
+              <li><a href="index.html#services-section" class="nav-link">Domains</a></li>
               <li><a href="index.html#team-section" class="nav-link">Team</a></li>
 
 
               <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-              <li><a href="index.html#gallery-section" class="nav-link">Gallery</a></li>
+              <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
               <li><a href="index.html#contact-section" class="nav-link">Contact</a></li>
 
             </ul>
@@ -178,7 +279,7 @@
     </header>
 
     <div class= "gallery-mag" >
-    <div class="site-section-cover overlay inner-page bg-light" style="background-image: url('images/new.jpg')"
+    <div  class="site-section-cover overlay inner-page bg-light blur" style="background-image: url('images/new.jpg')"
       data-aos="fade">
 
       <div class="container">
@@ -202,9 +303,10 @@
     <br>
     <br>
 
-    <div class="row text-center text-lg-left">
-      <div class="card">
-        <div class="imgBx" id="target" onclick="test()">
+    <div class="row text-center text-lg-left blur">
+
+      <div class="card" onclick="test()" style="margin-bottom:10%">
+        <div class="imgBx" id="target" >
           <img src="image_content\13JULY2019\3.jpg" alt="images">
         </div>
         <div class="details">
@@ -212,9 +314,11 @@
         </div>
       </div>
 
+      
 
-      <div class="card">
-          <div class="imgBx" id="target" onclick="test1()">
+
+      <div class="card" onclick="test1()" style="margin-bottom:10%">
+          <div class="imgBx" id="target" >
             <img src="image_content\New folder\10.jpg" alt="images">
           </div>
           <div class="details">
@@ -222,8 +326,8 @@
           </div>
         </div>
 
-            <div class="card">
-              <div class="imgBx" id="target" onclick="test2()">
+            <div class="card" onclick="test2()" style="margin-bottom:10%">
+              <div class="imgBx" id="target" >
                 <img src="image_content\Certificate\3.jpg" alt="images">
               </div>
               <div class="details">
@@ -236,11 +340,11 @@
   </div>
 
   <div class="container" id="photogallery" style="display: none;">
+    <span class="close">&times;</span>
 
     <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Recruitment</h1>
 
     <hr class="mt-2 mb-5">
-
     <div class="row text-center text-lg-left">
 
 
@@ -294,9 +398,10 @@
 
   </div>
 
-  <br>
-  <br>
+ 
   <div class="container" id="photogallery1" style="display: none;">
+    <span class="close1">&times;</span>
+    <br>
 
       <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Resonate 2.0</h1>
   
@@ -384,7 +489,8 @@
     <br>
     <br>
     <div class="container" id="photogallery2" style="display: none;">
-  
+      <span class="close2">&times;</span>
+      <br>
         <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Certificate Distribution</h1>
     
         <hr class="mt-2 mb-5">
@@ -679,7 +785,7 @@
 
   <br>
   <br>
-  <footer class="site-footer">
+  <footer class="site-footer blur">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -698,7 +804,7 @@
               <h2 class="footer-heading mb-4">Links</h2>
               <ul class="list-unstyled">
                 <li><a href="About.html">About Us</a></li>
-                <li><a href="index.html#services-section">Services</a></li>
+                <li><a href="index.html#Domains-section">Domains</a></li>
                 <li><a href="index.html#team-section">Team</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#contact-section">Contact Us</a></li>
@@ -764,11 +870,27 @@
       let x = document.getElementById("photogallery");
       let y = window.getComputedStyle(x);
       let z = y.getPropertyValue('display');
+      let body = document.getElementById('blur');
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function(){
+        x.style.display = "none";
+        blurr("nb");
+      }
+      window.onclick = function(event) {
+      if (event.target == x) {
+        x.style.display = "none";
+        blurr("nb");
+        }
+      }
       if (z == "block") {
         x.style.display = "none";
+        blurr("nb");
+
       }
       else {
         x.style.display = "inherit";
+        blurr("b");
+
       }
 
     }
@@ -776,23 +898,70 @@
       let x = document.getElementById("photogallery1");
       let y = window.getComputedStyle(x);
       let z = y.getPropertyValue('display');
+      var span = document.getElementsByClassName("close1")[0];
+      span.onclick = function(){
+        x.style.display = "none";
+        blurr("nb");
+      }
+      window.onclick = function(event) {
+      if (event.target == x) {
+          x.style.display = "none";
+          blurr("nb")
+        }
+      }
       if (z == "block") {
         x.style.display = "none";
+        blurr("nb");
+
       }
       else {
         x.style.display = "inherit";
+        blurr("b");
       }
 
+    }
+    function blurr(x)
+    {
+      let body = document.getElementsByClassName("blur");      
+      if (x == "b")
+      {
+        for(i in body){
+          body[i].style.filter = "blur(2px)";
+        }
+      }
+      else
+      {
+        for(i in body){
+          body[i].style.filter = "none";          
+        }
+      }
     }
     function test2() {
       let x = document.getElementById("photogallery2");
       let y = window.getComputedStyle(x);
       let z = y.getPropertyValue('display');
+      var span = document.getElementsByClassName("close2")[0];
+      span.onclick = function(){
+        x.style.display = "none";
+        blurr("nb");
+
+      }
+      window.onclick = function(event) {
+      if (event.target == x) {
+        x.style.display = "none";
+        blurr("nb");
+
+        }
+      }
       if (z == "block") {
         x.style.display = "none";
+        blurr("nb");
+
       }
       else {
         x.style.display = "inherit";
+        blurr("b");
+
       }
 
     }
