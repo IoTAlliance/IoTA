@@ -1462,9 +1462,6 @@
       var name = firstname + " " + lastname;
 
       $('#contactsubmit').click(function () {
-
-
-
         $.ajax({
           type: "POST",
           url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -1479,7 +1476,7 @@
                   'type': 'to'
                 },
                 {
-                  'email': sender,
+                  'email': sender_email,
                   'name': name,
                   'type': 'to'
                 }
