@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
@@ -1349,7 +1350,7 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-md-6 ml-auto">
-                    <input type="submit" class="btn btn-block btn-blue text-blue py-3 px-5" value="Send Message"
+                    <input type="submit" onclick="sendMail()" class="btn btn-block btn-blue text-blue py-3 px-5" value="Send Message"
                       id='contactsubmit'>
                   </div>
                 </div>
@@ -1455,13 +1456,14 @@
         b[0].className = "";
       }
 
-      var firstname = document.getElementById('fname'),
+      
+
+      function sendMail() {
+        var firstname = document.getElementById('fname'),
         lastname = document.getElementById('lname'),
         sender_email = document.getElementById('sender_email'),
         message = document.getElementById('message');
-      var name = firstname + " " + lastname;
-
-      $('#contactsubmit').click(function () {
+        var name = firstname + " " + lastname;
         $.ajax({
           type: "POST",
           url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -1472,7 +1474,7 @@
               'to': [
                 {
                   'email': 'contact@iotalliance.in',
-                  'name': name,
+                  'name': name ,
                   'type': 'to'
                 },
                 {
@@ -1481,15 +1483,15 @@
                   'type': 'to'
                 }
               ],
-              'autotext': 'true',
               'subject': 'CONTACT US',
               'html': message
             }
           }
-        }).done(function (response) {
-          console.log(response); // if you're into that sorta thing
+        // }).done(function (response) {
+        //   console.log(response); // if you're into that sorta thing
         });
-      });
+      }
+
     </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
