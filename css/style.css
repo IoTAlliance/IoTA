@@ -192,14 +192,14 @@
   color: #fff; }
   .primary-primary-outline--hover:hover {
     border-color: #007bff;
-    background: transparent; }
+    background: midnightblue; color: #fff; }
 
 .primary-outline-primary--hover {
   background: transparent;
   border-color: #007bff; }
   .primary-outline-primary--hover:hover {
     color: #fff;
-    background: #007bff; }
+    background: midnightblue; color: #fff; }
 
 body {
   line-height: 1.7;
