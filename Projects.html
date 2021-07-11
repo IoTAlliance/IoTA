@@ -50,7 +50,22 @@
             <!-- <a href="index.html" class="text-black"><span class="text-primary">IoTA Alliance</a> -->
             <a href="index.html"><img src="iota_logo.png" height="5%" width="180"></a>
           </div>
-
+          <div class="trophy-logo" data-toggle="popover" data-trigger="hover"
+          data-content="The All India Council for Technical Education has declared Iot Alliance the Model Club of SRM Institute, 2020-21 and granted IoTA a sum of Rs. 1 lakh as a grant-in aid under “Scheme for Promoting Interests, Creativity and Ethics among Students (SPICES)”. 
+IoTA wishes to engage this fund in supporting the interests, creativity and innovation of students through product development, participation in outstation events and conducting events for knowledge sharing among all students of the institute.
+With guidance of IoTA's faculty-in-charge, Dr. Kayalvizhi Jayavel, the team will strive to use the funds in the best possible way to benefit the club, making sure to live upto its high expectations." onmouseover="popover_display()">
+              
+                <img src="images/trophy.png" height="70" width="70" style="cursor: pointer;">
+              
+          </div>
+          <div class="trophy-text">
+            <span style="font-size: 13px; cursor: pointer;"data-toggle="popover" data-trigger="hover"
+            data-content="The All India Council for Technical Education has declared Iot Alliance the Model Club of SRM Institute, 2020-21 and granted IoTA a sum of Rs. 1 lakh as a grant-in aid under “Scheme for Promoting Interests, Creativity and Ethics among Students (SPICES)”. 
+  IoTA wishes to engage this fund in supporting the interests, creativity and innovation of students through product development, participation in outstation events and conducting events for knowledge sharing among all students of the institute.
+  With guidance of IoTA's faculty-in-charge, Dr. Kayalvizhi Jayavel, the team will strive to use the funds in the best possible way to benefit the club, making sure to live upto its high expectations." onmouseover="popover_display()">
+            Recognised by AICTE
+          </span>
+          </div>
           <nav class="site-navigation text-center ml-auto" role="navigation">
 
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
@@ -518,7 +533,28 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-
+  <script>
+    $( document ).ready(function() {
+      $('body').on('click', function (e) {
+      $('[data-toggle="popover"]').each(function () {
+          //the 'is' for buttons that trigger popups
+          //the 'has' for icons within a button that triggers a popup
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+          }
+      });
+  });
+  $('[data-toggle="popover"]').popover({
+    html: true,
+    title: function () {
+        return $(this).parent().find('.head').html();
+    },
+    content: function () {
+        return $(this).parent().find('.content').html();
+    }
+}); 
+  });
+  </script>
 </body>
 
 </html>

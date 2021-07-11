@@ -470,10 +470,50 @@ padding-bottom: 0.6em !important; }
     margin: 0;
     padding: 0;
     z-index: 3; }
+    .site-navbar .trophy-logo {
+      position: relative;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 0;
+      margin: 0px 0px 0px 36px !important;
+      padding: 0;
+      z-index: 3;
+      animation: blink 1.4s linear infinite; }
+      .site-navbar .trophy-text {
+        position: relative;
+        /* font-size: 1.2rem; */
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1.2;
+        margin: 0px 0px 0px 16px !important;
+        padding: 0;
+        z-index: 3;
+        width: 90px;
+        color:#0071b2;
+        /* animation: blink 1.4s linear infinite; */
+       }
+      @keyframes blink{
+        0%{opacity: .2;}
+        50%{opacity: .5;}
+        100%{opacity: 1;}
+        }
+        .popover-body {
+          background-color:#0071b2;
+          color: white;
+        }
     @media (max-width: 991.98px) {
       .site-navbar .site-logo {
         float: left;
         position: relative; } }
+        @media (max-width: 991.98px) {
+          .site-navbar .trophy-logo {
+            float: left;
+            position: relative; } }
+            @media (max-width: 991.98px) {
+              .site-navbar .trophy-text {
+                float: left;
+                position: relative; } }
   .site-navbar .site-navigation.border-bottom {
     border-bottom: 1px solid #f3f3f4 !important; }
   .site-navbar .site-navigation .site-menu {
